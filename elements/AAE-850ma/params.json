@@ -1,0 +1,245 @@
+{
+    "add_hover_pressed": true,
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 40,
+        "width": 320
+    },
+    "display": "PayPal Button",
+    "events": {
+        "AAc": {
+            "caption": "payment has been captured",
+            "name": "captured"
+        },
+        "AAd": {
+            "caption": "payment has been approved",
+            "name": "approved"
+        },
+        "AAe": {
+            "caption": "encountered an error",
+            "name": "error"
+        },
+        "AAf": {
+            "caption": "Triggered when the payment is successful.",
+            "name": "payment_successful"
+        },
+        "AAg": {
+            "caption": "Triggered when the payment fails.",
+            "name": "payment_failed"
+        },
+        "AAh": {
+            "caption": "Triggered when a subscription is created.",
+            "name": "subscription_created"
+        }
+    },
+    "fields": {
+        "AAF": {
+            "caption": "Note: PayPal does not recommend loading more than one instance of a PayPal Button on a page.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 0
+        },
+        "AAG": {
+            "caption": "Amount",
+            "doc": "The amount to charge in whole currency. Example: 10.00",
+            "editor": "DynamicValue",
+            "name": "amount",
+            "rank": 1,
+            "value": "number"
+        },
+        "AAH": {
+            "caption": "Currency Code",
+            "default_val": "USD,EUR,BRL,CAD,AUD",
+            "doc": "The three-digit currency code. Example: USD",
+            "editor": "DynamicValue",
+            "name": "currency",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAI": {
+            "caption": "Layout",
+            "default_val": "Vertical",
+            "doc": "The layout of the PayPal buttons. Example: Vertical",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "layout",
+            "options": "Vertical,Horizontal",
+            "rank": 3
+        },
+        "AAJ": {
+            "caption": "Color",
+            "default_val": "Gold",
+            "doc": "The color of the PayPal button. Example: Blue",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "color",
+            "options": "Gold,Blue,Silver,White,Black",
+            "rank": 4
+        },
+        "AAK": {
+            "caption": "Label",
+            "default_val": "PayPal",
+            "doc": "The text shown on the PayPal button. Example: Checkout",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "label",
+            "options": "PayPal,Checkout,Pay,Buy Now",
+            "rank": 5
+        },
+        "AAL": {
+            "caption": "Shape",
+            "default_val": "Rectangle",
+            "doc": "The shape of the PayPal button. Example: Rectangle",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "shape",
+            "options": "Rectangle,Pill",
+            "rank": 6
+        },
+        "AAM": {
+            "caption": "Expose console logs?",
+            "default_val": false,
+            "doc": "If enabled, log messages may be emitted in a client's console. We recommend enabling this feature in non-Live application versions.",
+            "editor": "DynamicValue",
+            "name": "exposelogs",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "AAN": {
+            "caption": "Button Size",
+            "default_val": " Medium",
+            "editor": "Dropdown",
+            "name": "size",
+            "options": "Small, Medium, Large",
+            "rank": 8
+        },
+        "AAO": {
+            "caption": "Shipping Preference",
+            "default_val": "GET_FROM_FILE",
+            "editor": "Dropdown",
+            "name": "shipping_preference",
+            "options": "GET_FROM_FILE, NO_SHIPPING, SET_PROVIDED_ADDRESS",
+            "rank": 9
+        },
+        "AAP": {
+            "caption": "PayPal Locale",
+            "default_val": "en_US",
+            "editor": "Dropdown",
+            "name": "locale",
+            "options": "en_US, pt_BR, fr_FR, es_ES",
+            "rank": 10
+        },
+        "AAQ": {
+            "caption": "Enable Subscriptions",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "subscription_mode",
+            "rank": 11
+        },
+        "AAR": {
+            "caption": "Plan ID",
+            "doc": "The ID of the subscription plan.",
+            "editor": "DynamicValue",
+            "name": "plan_id",
+            "rank": 12,
+            "value": "text"
+        },
+        "AAS": {
+            "caption": "Enable Debug Mode",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "debug_mode",
+            "rank": 13
+        }
+    },
+    "icon": "ion-card",
+    "platform_type": "web",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAT": {
+            "caption": "Order ID",
+            "doc": "The ID of the order charged. Example: 5O190127TN364715T",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "orderid",
+            "value": "text"
+        },
+        "AAU": {
+            "caption": "Order Status",
+            "doc": "The status of the order. Example: \"APPROVED\"",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "orderstatus",
+            "value": "text"
+        },
+        "AAV": {
+            "caption": "Payer ID",
+            "doc": "The payer of the ID. Example: P1234",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "payerid",
+            "value": "text"
+        },
+        "AAW": {
+            "caption": "Payer Name",
+            "doc": "The name of the payer. Example: John Smith",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "payername",
+            "value": "text"
+        },
+        "AAX": {
+            "caption": "Payer Email Address",
+            "doc": "The email of the payer.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "payeremail",
+            "value": "text"
+        },
+        "AAY": {
+            "caption": "Error Message",
+            "doc": "Any error message returned in the payment or creation process.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error",
+            "value": "text"
+        },
+        "AAZ": {
+            "caption": "Capture ID",
+            "doc": "The ID of the order payment's capture. Example: 3C679366HH908993F",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "captureid",
+            "value": "text"
+        },
+        "AAa": {
+            "caption": "Payment Status",
+            "doc": "The status of the payment (e.g., succeeded, failed).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "payment_status",
+            "value": "text"
+        },
+        "AAb": {
+            "caption": "Transaction ID",
+            "doc": "The unique ID of the transaction generated after payment capture.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "transaction_id",
+            "value": "text"
+        }
+    }
+}

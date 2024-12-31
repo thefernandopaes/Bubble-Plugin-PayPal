@@ -1,0 +1,4 @@
+{
+    "caption": "create_subscription",
+    "doc": "Creates a subscription using the PayPal API."
+}
